@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "TrueRate",
+  "version": "1.0.0",
+  "description": "Shows the real interest rate hidden inside lease-to-own and pay-later offers at checkout.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "TrueRate calculator",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["apr.js", "parser.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

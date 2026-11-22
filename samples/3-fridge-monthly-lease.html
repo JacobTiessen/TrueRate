@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frostbay Appliances – Checkout (TrueRate sample store)</title>
+<link rel="stylesheet" href="store.css">
+<style>:root { --brand: #0f4c5c; --accent: #0e7490; --accent-bg: #ecfeff; --img: linear-gradient(135deg,#e2e8f0,#94a3b8); }</style>
+</head>
+<body>
+  <div class="nav"><span>FROSTBAY APPLIANCES</span><a href="index.html">← All sample stores</a></div>
+  <div class="note">Made-up store for the TrueRate demo. Not a real business or lender.</div>
+  <main>
+    <section class="card">
+      <h2>Your cart</h2>
+      <div class="item">
+        <div class="img"></div>
+        <div><b>Frostbay 26 cu. ft. French-Door Refrigerator</b><br>Qty 1<br>Cash price: $1,299.00</div>
+      </div>
+      <div class="line" style="margin-top:16px"><span>Subtotal</span><span>$1,299.00</span></div>
+      <div class="line"><span>Shipping</span><span>Free</span></div>
+      <div class="line total"><span>Order total</span><span>$1,299.00</span></div>
+    </section>
+    <section class="card">
+      <h2>Payment</h2>
+      <div class="opt">Credit / debit card</div>
+      <div id="promo-slot"><div class="fine">Loading more payment options…</div></div>
+      <button>Place order</button>
+    </section>
+  </main>
+  <template id="promo"><div class="opt promo">
+          <b>HomeNow Rent-to-Own</b> · Bad credit OK<br>
+          <span class="big">Only $129/mo</span><br>
+          18 monthly payments, delivered this week.
+          <div class="fine">$49.99 initial payment due today. Rental-purchase agreement.</div>
+        </div></template>
+  <script>
+    // Real checkout pages often load payment offers a moment after the page.
+    // This copies that, so the demo shows TrueRate catching an offer that appears late.
+    setTimeout(() => {
+      document.getElementById("promo-slot").innerHTML = document.getElementById("promo").innerHTML;
+    }, 1200);
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voltline Electronics – Checkout (TrueRate sample store)</title>
+<link rel="stylesheet" href="store.css">
+<style>:root { --brand: #1e3a8a; --accent: #2563eb; --accent-bg: #eff6ff; --img: linear-gradient(135deg,#94a3b8,#334155); }</style>
+</head>
+<body>
+  <div class="nav"><span>VOLTLINE ELECTRONICS</span><a href="index.html">← All sample stores</a></div>
+  <div class="note">Made-up store for the TrueRate demo. Not a real business or lender.</div>
+  <main>
+    <section class="card">
+      <h2>Your cart</h2>
+      <div class="item">
+        <div class="img"></div>
+        <div><b>Vertex 15" Laptop, 16GB / 512GB</b><br>Qty 1<br>Cash price: $799.00</div>
+      </div>
+      <div class="line" style="margin-top:16px"><span>Subtotal</span><span>$799.00</span></div>
+      <div class="line"><span>Shipping</span><span>Free</span></div>
+      <div class="line total"><span>Order total</span><span>$799.00</span></div>
+    </section>
+    <section class="card">
+      <h2>Payment</h2>
+      <div class="opt">Credit / debit card</div>
+      <div id="promo-slot"><div class="fine">Loading more payment options…</div></div>
+      <button>Place order</button>
+    </section>
+  </main>
+  <template id="promo"><div class="opt promo">
+          <b>FlexPath Lease-to-Own</b> · No credit needed<br>
+          <span class="big">$59.99 every 2 weeks</span><br>
+          for 12 months. Approval in seconds!
+          <div class="fine">Lease-to-own agreement. Early purchase options available. Not a loan.</div>
+        </div></template>
+  <script>
+    // Real checkout pages often load payment offers a moment after the page.
+    // This copies that, so the demo shows TrueRate catching an offer that appears late.
+    setTimeout(() => {
+      document.getElementById("promo-slot").innerHTML = document.getElementById("promo").innerHTML;
+    }, 1200);
+  </script>
+</body>
+</html>

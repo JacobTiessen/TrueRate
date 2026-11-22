@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trailhead Cycles – Checkout (TrueRate sample store)</title>
+<link rel="stylesheet" href="store.css">
+<style>:root { --brand: #7c2d12; --accent: #c2410c; --accent-bg: #fff7ed; --img: linear-gradient(135deg,#fdba74,#9a3412); }</style>
+</head>
+<body>
+  <div class="nav"><span>TRAILHEAD CYCLES</span><a href="index.html">← All sample stores</a></div>
+  <div class="note">Made-up store for the TrueRate demo. Not a real business or lender.</div>
+  <main>
+    <section class="card">
+      <h2>Your cart</h2>
+      <div class="item">
+        <div class="img"></div>
+        <div><b>Ridgeline Commuter Bike, Medium</b><br>Qty 1<br>Cash price: $250.00</div>
+      </div>
+      <div class="line" style="margin-top:16px"><span>Subtotal</span><span>$250.00</span></div>
+      <div class="line"><span>Shipping</span><span>Free</span></div>
+      <div class="line total"><span>Order total</span><span>$250.00</span></div>
+    </section>
+    <section class="card">
+      <h2>Payment</h2>
+      <div class="opt">Credit / debit card</div>
+      <div id="promo-slot"><div class="fine">Loading more payment options…</div></div>
+      <button>Place order</button>
+    </section>
+  </main>
+  <template id="promo"><div class="opt promo">
+          <b>Pay in 4</b> · 4 interest-free payments of $62.50<br>
+          <span class="big">$62.50 today</span><br>
+          then every 2 weeks. No fees if you pay on time.
+          <div class="fine">Subject to approval.</div>
+        </div></template>
+  <script>
+    // Real checkout pages often load payment offers a moment after the page.
+    // This copies that, so the demo shows TrueRate catching an offer that appears late.
+    setTimeout(() => {
+      document.getElementById("promo-slot").innerHTML = document.getElementById("promo").innerHTML;
+    }, 1200);
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { width: 330px; margin: 0; font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; background: #151313; color: #fff; }
+  header { padding: 12px 14px; background: #1f1a1a; border-bottom: 1px solid #2e2626; }
+  header b { font-size: 16px; letter-spacing: .04em; }
+  header div { font-size: 12px; color: #cfc4c4; margin-top: 2px; }
+  form { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 12px 14px; }
+  label { font-size: 11px; color: #a99c9c; display: flex; flex-direction: column; gap: 3px; }
+  input, select { background: #241d1d; color: #fff; border: 1px solid #4a3838; border-radius: 7px; padding: 6px; font: inherit; width: 100%; box-sizing: border-box; }
+  label { min-width: 0; }
+  #out { margin: 0 14px 14px; border-radius: 12px; border: 2px solid var(--c, #ef4444); overflow: hidden; }
+  .lvl { background: var(--c, #ef4444); color: #151313; font-size: 11px; font-weight: 700; padding: 5px 10px; }
+  .inner { padding: 10px 12px; }
+  .rate { font-size: 38px; font-weight: 800; color: var(--c, #ef4444); line-height: 1.1; }
+  .plain { color: #e6dada; font-size: 13px; margin: 6px 0 8px; }
+  .row { display: flex; justify-content: space-between; border-top: 1px solid #2e2626; padding: 6px 0; }
+  .good { color: #6ee7a8; }
+  .empty { padding: 12px; color: #cfc4c4; }
+</style>
+</head>
+<body>
+  <header><b>TRUERATE</b><div>Type in any lease-to-own or pay-later offer, even one you saw in a store, to see what it really costs.</div></header>
+  <form id="f">
+    <label>Cash price $<input id="price" type="number" step="0.01" value="899.99"></label>
+    <label>Each payment $<input id="payment" type="number" step="0.01" value="22"></label>
+    <label>How often<select id="frequency">
+      <option value="week">Weekly</option><option value="biweek">Every 2 weeks</option>
+      <option value="semimonth">Twice a month</option><option value="month">Monthly</option>
+    </select></label>
+    <label># of payments<input id="count" type="number" step="1" value="104"></label>
+    <label>Due today $<input id="upfront" type="number" step="0.01" value="0"></label>
+  </form>
+  <div id="out"></div>
+  <script src="apr.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

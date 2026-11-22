@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maple & Pine Home – Checkout (TrueRate sample store)</title>
+<link rel="stylesheet" href="store.css">
+<style>:root { --brand: #2f3e2f; --accent: #2f7d4f; --accent-bg: #f0faf3; --img: linear-gradient(135deg,#8a9a7b,#5d6d50); }</style>
+</head>
+<body>
+  <div class="nav"><span>MAPLE &amp; PINE HOME</span><a href="index.html">← All sample stores</a></div>
+  <div class="note">Made-up store for the TrueRate demo. Not a real business or lender.</div>
+  <main>
+    <section class="card">
+      <h2>Your cart</h2>
+      <div class="item">
+        <div class="img"></div>
+        <div><b>Harbor 3-Seat Sofa, Sage Green</b><br>Qty 1<br>Cash price: $899.99</div>
+      </div>
+      <div class="line" style="margin-top:16px"><span>Subtotal</span><span>$899.99</span></div>
+      <div class="line"><span>Shipping</span><span>Free</span></div>
+      <div class="line total"><span>Order total</span><span>$899.99</span></div>
+    </section>
+    <section class="card">
+      <h2>Payment</h2>
+      <div class="opt">Credit / debit card</div>
+      <div id="promo-slot"><div class="fine">Loading more payment options…</div></div>
+      <button>Place order</button>
+    </section>
+  </main>
+  <template id="promo"><div class="opt promo">
+          <b>EasyKeep Lease-to-Own</b> · No credit needed!<br>
+          <span class="big">Just $22.00/week</span><br>
+          Take it home today. 104 weekly payments.
+          <div class="fine">$49 processing fee due today. Total cost of ownership $2,337.00.
+          This is a rental-purchase agreement, not a loan. Ownership is optional.</div>
+        </div></template>
+  <script>
+    // Real checkout pages often load payment offers a moment after the page.
+    // This copies that, so the demo shows TrueRate catching an offer that appears late.
+    setTimeout(() => {
+      document.getElementById("promo-slot").innerHTML = document.getElementById("promo").innerHTML;
+    }, 1200);
+  </script>
+</body>
+</html>
