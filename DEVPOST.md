@@ -101,4 +101,4 @@ javascript · html · css · chrome-extension · manifest-v3 · shadow-dom · no
 
 ## Try it out
 - GitHub: https://github.com/JacobTiessen/TrueRate
-- Demo video: *(your YouTube link)*
+- Demo video: https://youtu.be/KsizOH12GOI
