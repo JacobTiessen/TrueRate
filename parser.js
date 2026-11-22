@@ -106,7 +106,7 @@ const TrueRateParser = (() => {
     return up ? toNum(up[1]) : 0;
   }
 
-  return { parse, frequencyFrom, TRIGGERS };
+  return { parse };
 })();
 
 if (typeof module !== "undefined") module.exports = TrueRateParser;

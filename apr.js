@@ -73,7 +73,6 @@ const TrueRate = (() => {
       totalPaid,
       extraCost,
       markupPct: extraCost / price,
-      termYears: count / perYear,
       periodsToSave: Math.ceil(price / payment), // save the same payment instead, then buy it outright
       periodWord: PERIOD_WORD[frequency],
       periodPlural: PERIOD_PLURAL[frequency],
@@ -120,7 +119,6 @@ const TrueRate = (() => {
     plainEnglish,
     creditCardComparison,
     presentValue,
-    solvePeriodicRate,
     PERIODS_PER_YEAR,
     LEGAL_CAP,
     money,
