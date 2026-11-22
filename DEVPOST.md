@@ -67,6 +67,22 @@ TrueRate is a Chrome extension that watches checkout pages. When it sees a lease
 - **Tests.** 24 automated tests in Node.js. They check the solver against real loans with known rates (a 12% loan and a 6% car loan, both recovered to within 0.01%), check that every sample store is read correctly, and check that bad input returns "can't calculate" instead of a wrong number.
 - **Privacy by design.** Everything runs on your own computer. There's no server, no account and no tracking.
 
+## Usability and accessibility
+
+- **Plain English first:** every banner leads with one sentence anyone can understand ("You pay $1,437.01 extra just for paying over time"). The math is there for people who want it, folded away by default.
+- **Never color alone:** every verdict is written out in words ("Fair deal: no hidden interest", "Above the 36% legal limit"), so color-blind users get the same message.
+- **Large, high-contrast text** on a dark banner, readable on any store's design.
+- **Nothing to set up:** no account and no settings. Install it and it works on every page.
+- **Helpful when it's unsure:** if a store hides the terms, TrueRate says so and asks for the missing numbers instead of guessing.
+- **Works offline and privately:** no data leaves the computer, which matters for people who are worried about money.
+
+## What I built during the event (and what was pre-existing)
+
+Everything was built during EvoHacks II on Nov 21–22, 2026: the extension, the math engine, the offer reader, the 5 sample stores, the tests, the screenshots and the demo video. The [commit history](https://github.com/JacobTiessen/TrueRate/commits/main) shows it.
+
+- **Pre-existing components:** none. No libraries or frameworks, only Chrome's built-in extension APIs and plain JavaScript.
+- **AI use:** I built TrueRate solo with help from an AI assistant (Claude), which I used for coding, research and making the demo video. I chose the problem and the approach, and I checked the math against known loan rates.
+
 ## Challenges I ran into
 
 - **Stores write the same offer a dozen different ways.** "$22/week", "$22 per week", "$22 a week", "$22 weekly", "every 2 weeks" versus "bi-weekly"... I had to build the reader one pattern at a time and test each one.
