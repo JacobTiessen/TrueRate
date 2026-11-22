@@ -100,5 +100,5 @@ TrueRate is a Chrome extension that watches checkout pages. When it sees a lease
 javascript · html · css · chrome-extension · manifest-v3 · shadow-dom · node.js
 
 ## Try it out
-- GitHub: `https://github.com/JacobTiessen/TrueRate` *(put your real link here)*
+- GitHub: https://github.com/JacobTiessen/TrueRate
 - Demo video: *(your YouTube link)*
