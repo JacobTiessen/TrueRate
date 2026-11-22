@@ -4,7 +4,7 @@
 
 Built for **EvoHacks II** (theme: Projects for Social Good).
 
-▶️ **[Watch the 2:50 demo video](https://youtu.be/KsizOH12GOI)**
+▶️ **[Watch the 2:40 explainer video](https://youtu.be/otmJ5uLHqHk)** · [full product walkthrough](https://youtu.be/KsizOH12GOI)
 
 ![The problem: $22 a week turns into a 122% APR](docs/problem.png)
 
