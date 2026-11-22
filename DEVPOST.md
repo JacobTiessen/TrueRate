@@ -23,6 +23,8 @@ A Chrome extension that shows the real interest rate hidden inside "lease-to-own
 
 ## Inspiration
 
+I'm a high school senior who wants to work in finance, and I'll be the first person in my family to go to college. I built TrueRate because the math behind interest rates shouldn't only work for lenders. It should work for the people signing the deals too.
+
 Picture this: your fridge breaks, you have no savings and your credit is bad. You find a new one online, and at checkout a bright green box says **"No credit needed! Just $129 a month."** It feels like a lifeline, so you click it.
 
 What that box doesn't tell you is that you'll pay **$2,371.99 for a $1,299 fridge**. As a loan, that's about a **90% interest rate**.
