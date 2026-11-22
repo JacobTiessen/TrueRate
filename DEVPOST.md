@@ -55,6 +55,15 @@ TrueRate is a Chrome extension that watches checkout pages. When it sees a lease
 | Bike: 4 interest-free payments of $62.50 | 🟢 0%, fair |
 | Tires: "as low as $35 a week*" | 🟡 Terms hidden, asks for details |
 
+## How TrueRate is different
+
+Rent-to-own calculators already exist, but they're websites you have to find and fill in yourself. Checkout-warning extensions exist too, but they look for hidden fees, subscriptions and dark patterns. TrueRate is different in four ways:
+
+1. **It does real math, not keyword flags.** Other warning tools say "this looks risky." TrueRate solves for the exact rate (122%), the same way lenders must for loans.
+2. **It targets the one product that legally avoids showing a rate.** Lease-to-own counts as a "rental," so its APR is hidden by design. That makes it exactly where an automatic APR check is most needed.
+3. **It gives you something to do instead.** "Save $22 a week for 41 weeks and you own it" is a plan, not just a warning.
+4. **It's fair.** Honest payment plans get a green light. TrueRate flags hidden costs, not every payment plan.
+
 ## How I built it
 
 - **Plain JavaScript + Chrome Manifest V3.** No frameworks and no build step, so anyone can read the code and install it in two minutes.
